@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --bg: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    color: var(--White);
+    transition: all 0.3s;
+}
+
+/* Color */
+
+body{
+    background-color: var(--bg);
+}
+
+.card{
+    background-color: var(--bg-card);
+}
+
+.prc{
+    color:var(--cyan);
+    font-weight: 600;
+}
+
+/*Position and sizes*/
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding:2rem;
+    width: 25rem;
+    height: 40rem;
+    margin-top: 5rem;
+    border-radius:1.6rem;
+}
+
+#nft,#nft>img{
+    max-width:100%;
+    max-height: 100%;
+    border-radius: 1rem;
+}
+
+
+.card div{
+    margin-top: 1rem;
+}
+
+/* style*/
+
+.nom{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    margin-left: 0 !important;
+}
+
+.des,.time,.auth{
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: var(--soft-blue);
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.auth::before{
+    position: absolute;
+    content: '';
+    width: 20rem;
+    height: 2px;
+    background-color: var(--line);
+    margin-top: -4rem;
+}
+
+.auth{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1.3rem !important;
+}
+
+
+.auth>img{
+    width: 3rem;
+    margin-right: 1rem;
+    border-radius: 2rem;
+    border:1px solid var(--soft-blue);
+}
+
+a{
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.3rem;
+}
+
+/*Hover */
+
+a:hover{
+    color: var(--cyan);
+}
+
+#nft>svg{
+    position: absolute;
+    margin-top: 8.5rem;
+    margin-left: -12rem;
+    display: none;
+}
+
+#nft:hover::before{
+    content: '';
+    justify-content: center;
+    width:21rem;
+    position: absolute;
+    height: 21rem;
+    background-color: var(--cyan);
+    opacity: 30%;
+    border-radius: 1rem;
+}
+
+#nft:hover>svg{
+    display: inline;
+}
+
+@media (max-width: 400px) {
+    #nft>svg{
+        position: absolute;
+        margin-top: 8.5rem;
+        margin-left: -11rem;
+    }
+    #nft:hover::before{
+        width:82vw;
+        min-width: 220px;
+        height: 82vw;
+        min-height: 220px;
+    }
+    
+}
+
+
